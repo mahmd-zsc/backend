@@ -33,9 +33,9 @@ app.use(`${process.env.API_VERSION}auth/`, require("./routes/auth"));
 app.use(`${process.env.API_VERSION}colors/`, require("./routes/color"));
 app.use(`${process.env.API_VERSION}orders/`, require("./routes/order"));
 // app.use(express.static(`E:\\Programming\\zamalek-store\\frontend\\build`))
-// app.get("*",(req, res)=> {
-//   res.sendFile(`E:\\Programming\\zamalek-store\\frontend\\build\\index.html`)
-// });
+app.get("*", (req, res) => {
+  res.json({ message: "hello world" });
+});
 // Error handling middleware
 
 // Start the server
